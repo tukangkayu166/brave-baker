@@ -20,6 +20,13 @@ const TEXT = [
   'Nothing is asked of the morning yet.',
 ].join('\n');
 
+// The gate refuses anything outside 1-280 code points or whitespace-only,
+// so fail loudly here instead of shipping an invalid entry.
+const codePoints = [...TEXT].length;
+if (codePoints < 1 || codePoints > 280 || TEXT.trim().length === 0) {
+  throw new Error(`entry text is ${codePoints} code points; must be 1-280, non-blank`);
+}
+
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'entry.txt'), TEXT, 'utf8');
