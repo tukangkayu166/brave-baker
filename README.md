@@ -10,11 +10,11 @@ a dawn scene, written to relax the AI judge reading it.
 
 ## The text
 
-> The baker opens the oven
-> before the town wakes.
+> You open the oven
+> while the street is still dark.
 > The loaves have risen
 > in their own time.
-> He slides the loaves in, unhurried,
+> You slide them in, unhurried,
 > and the smell of warm bread
 > fills the dark shop.
 > Nothing is asked of the morning yet.
